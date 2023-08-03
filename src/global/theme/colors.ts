@@ -1,0 +1,10 @@
+export const white = '#fff';
+export const black = '#000';
+export const gray = '#8B8989';
+export const background_light = '#F1F2F3';
+export const background_black = '#373737';
+export const primary = '#FFD1A6';
+export const secondary = '#3D2B1F';
+export const attention = '#D45555';
+export const title = '#212529';
+export const subtitle = '#8A8A8A';
