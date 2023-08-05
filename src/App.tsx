@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
-import { SigninScreen } from './src/screens/SigninScreen';
-import useAppearance from './src/global/hooks';
+import useAppearance from './global/hooks';
 import {ThemeProvider} from 'styled-components/native';
 import { StatusBar } from 'react-native';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { WEBCLIENTID } from '@env';
+import {NavigationContainer} from '@react-navigation/native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Routes } from './navigation';
 
 function App(): JSX.Element {
   const { theme } = useAppearance();
@@ -13,19 +14,26 @@ function App(): JSX.Element {
     GoogleSignin.configure({
       offlineAccess: true,
       scopes: ['profile', 'email'],
-      webClientId: WEBCLIENTID,
+      webClientId: "",
     });
   },[])
 
   return (
+    <GestureHandlerRootView style={{flex: 1}}>
+
       <ThemeProvider theme={theme}>
       <StatusBar
         barStyle="dark-content"
         translucent
         backgroundColor="transparent"
       />
-        <SigninScreen />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
+
       </ThemeProvider>
+    </GestureHandlerRootView>
+
   );
 }
 
