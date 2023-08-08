@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
   },
   content: {
     marginBottom: Platform.OS === 'ios' ? 38 : 24,
