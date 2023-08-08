@@ -53,7 +53,7 @@ export const typographyCommon: Typography = {
   },
   body2: {
     fontSize: 16,
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.medium,
   },
   body3: {
     fontSize: 14,

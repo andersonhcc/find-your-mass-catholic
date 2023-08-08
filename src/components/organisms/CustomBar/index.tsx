@@ -60,7 +60,7 @@ export const CustomBar: React.FC<BottomTabBarProps> = ({ state, descriptors, nav
                     {
                       padding: 15,
                       borderRadius: 99,
-                      backgroundColor: isFocused ? '#FF8C0050' : 'transparent',
+                      backgroundColor: isFocused ? colors.primary : 'transparent',
                     },
                   ]}>
                   {options.tabBarIcon &&
