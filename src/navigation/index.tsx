@@ -1,7 +1,7 @@
 import { Loading } from '../components/molecules/Loading';
 import React from 'react';
 
-import { AppRoutes } from './app-stack.routes';
+import { AppStackRoutes } from './app-stack.routes';
 import { AuthRoutes } from './auth.routes';
 
 export function Routes() {
@@ -14,7 +14,7 @@ export function Routes() {
   return (
     <>
       {isAuthenticated ? (
-          <AppRoutes />
+          <AppStackRoutes />
       ) : (
         <AuthRoutes />
       )}

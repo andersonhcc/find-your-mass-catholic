@@ -1,5 +1,10 @@
-import styled from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 
-export const Container = styled.View`
+type Props = {
+  center?: boolean
+}
+
+export const Container = styled.View<Props>`
 flex-direction: row;
+${({center}) => center && css`align-items: center`}
 `;

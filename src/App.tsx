@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useAppearance from './global/hooks';
+import useAppearance from './global/hooks/useAppearance';
 import { ThemeProvider } from 'styled-components/native';
 import { StatusBar } from 'react-native';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';

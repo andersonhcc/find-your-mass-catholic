@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, Pressable, StyleSheet, View } from 'react-native';
 import { InputSearch } from '../../components/molecules/InputSearch';
 import { Container, Icon, Separator } from '../../components';
 import { Header, WrapperTitle } from "./styles";
@@ -9,8 +9,10 @@ import igreja3 from "../../assets/images/igreja3.png";
 import { Text } from '../../components';
 import { Row } from '../../components/atoms/Row';
 import { Image } from 'react-native';
+import useAppNavigation from '../../global/hooks/useAppNavigation';
 
 export const FavoriteScreen: React.FC = () => {
+  const {navigate} = useAppNavigation();
 
   const mockChurch = [
     {
@@ -41,8 +43,8 @@ export const FavoriteScreen: React.FC = () => {
         contentContainerStyle={{ paddingBottom: 100 }}
         keyExtractor={data => data.name}
         renderItem={({ item }) => (
-          <View style={[styles.heading, styles.shadow]}>
-            <Image source={item.image} />
+          <Pressable onPress={() => navigate("DetailsCurchScreen", {data: item})} style={[styles.heading, styles.shadow]}>
+            <Image source={item.image}/>
             <Separator height={10} />
             <Row>
 
@@ -60,7 +62,7 @@ export const FavoriteScreen: React.FC = () => {
               </WrapperTitle>
 
             </Row>
-          </View>
+          </Pressable>
         )}
       />
     </Container>

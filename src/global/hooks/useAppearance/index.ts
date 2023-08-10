@@ -1,7 +1,7 @@
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Appearance} from 'react-native';
 import {colorSchemeProps, Props, themeType} from './types';
-import {lightTheme} from "../../global/theme/default";
+import {lightTheme} from "../../theme/default";
 
 const useAppearance = (): Props => {
   const [currentTheme, setCurrentTheme] = useState<themeType>(
