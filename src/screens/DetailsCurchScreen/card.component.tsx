@@ -1,7 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Row } from '../../components/atoms/Row';
+import { Pressable, View } from 'react-native';
 import { Text } from '../../components';
+import {ButtonOption} from './styles';
 
 export const CardComponent: React.FC = () => {
   return (
@@ -12,9 +12,9 @@ export const CardComponent: React.FC = () => {
         justifyContent: "space-around",
         flexDirection: "row",
       }}>
-        <Text typography='subtitle2'>Sobre</Text>
-        <Text typography='subtitle2'>Pregação</Text>
-        <Text typography='subtitle2'>Media</Text>
+        <ButtonOption><Text typography='subtitle2'>Sobre</Text></ButtonOption>
+        <ButtonOption><Text typography='subtitle2'>Pregação</Text></ButtonOption>
+        <ButtonOption><Text typography='subtitle2'>Media</Text></ButtonOption>
       </View>
     </View>
   );

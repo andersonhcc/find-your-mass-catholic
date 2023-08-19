@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Pressable, StyleSheet, View } from 'react-native';
+import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { InputSearch } from '../../components/molecules/InputSearch';
 import { Container, Icon, Separator } from '../../components';
 import { Header, WrapperTitle } from "./styles";
@@ -10,6 +10,7 @@ import { Text } from '../../components';
 import { Row } from '../../components/atoms/Row';
 import { Image } from 'react-native';
 import useAppNavigation from '../../global/hooks/useAppNavigation';
+import { ScreenContainer } from '../../components/organisms/ScreenContainer';
 
 export const FavoriteScreen: React.FC = () => {
   const {navigate} = useAppNavigation();
@@ -27,7 +28,7 @@ export const FavoriteScreen: React.FC = () => {
   ]
 
   return (
-    <Container backgroundColor='#F7F7F7'>
+    <ScreenContainer>
       <Separator height={50} />
       <FlatList
         data={mockChurch}
@@ -65,11 +66,10 @@ export const FavoriteScreen: React.FC = () => {
           </Pressable>
         )}
       />
-    </Container>
+    </ScreenContainer>
   );
 
 };
-
 
 
 const styles = StyleSheet.create({

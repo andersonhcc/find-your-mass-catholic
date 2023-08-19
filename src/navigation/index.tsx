@@ -6,7 +6,7 @@ import { AuthRoutes } from './auth.routes';
 
 export function Routes() {
   const loading = false;
-  const isAuthenticated = true;
+  const isAuthenticated = false;
 
   if (loading) {
     return <Loading size="large" color="primary" />;
