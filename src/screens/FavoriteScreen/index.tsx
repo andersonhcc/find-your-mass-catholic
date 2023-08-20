@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { InputSearch } from '../../components/molecules/InputSearch';
-import { Container, Icon, Separator } from '../../components';
+import { Icon, Separator } from '../../components';
 import { Header, WrapperTitle } from "./styles";
 import igreja from "../../assets/images/igreja.png"
 import igreja2 from "../../assets/images/igreja2.png";

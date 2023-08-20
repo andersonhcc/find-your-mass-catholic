@@ -1,5 +1,7 @@
 import React from 'react';
 import AvatarSignin from "../../assets/images/avatarsignin.svg"
+import { NumberProp } from 'react-native-svg';
+
 import {
   Text,
   Separator,
@@ -11,15 +13,16 @@ import {
 
 type Props = {
   handleLoginWithGoogle: () => void;
+
   objectWidthAndHeight: {
-    width: number;
-    height: number;
+    width: NumberProp;
+    height: NumberProp;
   }
 }
 
-export const SigninView: React.FC<Props> = ({ handleLoginWithGoogle, objectWidthAndHeight }: Props) => {
+ const SigninView: React.FC<Props> = ({ handleLoginWithGoogle, objectWidthAndHeight }: Props) => {
   return (
-    <ScreenContainer backgroundColor='#FFD1A6'>
+    <ScreenContainer backgroundColor='primary'>
       <Center>
         <Separator height={30} />
         <AvatarSignin
@@ -45,3 +48,4 @@ export const SigninView: React.FC<Props> = ({ handleLoginWithGoogle, objectWidth
   );
 };
 
+export default SigninView;

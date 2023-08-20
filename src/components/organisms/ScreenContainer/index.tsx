@@ -1,10 +1,11 @@
 import React from 'react';
 import { ContainerScroll, ContainerView } from './styles'
+import { ColorsType } from 'styled-components';
 
 type Props = {
   scroll?: boolean
   children: React.ReactNode;
-  backgroundColor?: string
+  backgroundColor?: ColorsType
 }
 
 export const ScreenContainer = ({ scroll = false, children, backgroundColor }: Props) => {
@@ -18,15 +19,10 @@ export const ScreenContainer = ({ scroll = false, children, backgroundColor }: P
 
     )
   }
-  else{
-
-
   return (
     <ContainerView backgroundColor={backgroundColor}>
       {children}
     </ContainerView>
   );
 }
-
-};
 

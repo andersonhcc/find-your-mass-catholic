@@ -1,4 +1,4 @@
-import {SigninView} from "./view";
+import SigninView from "./view";
 import { UserModel } from "../../models/User";
 import { PixelRatio } from "react-native";
 
